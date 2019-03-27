@@ -17,15 +17,17 @@
         let pass = document.getElementById("password").value;
         if (id == "Admin"){
             if (pass == "TheMaster"){
-                alert("Welcome");
+                alert("Welcome")
             }
                 else if (pass == "null"){
                 alert("canceled")
             }
                     else alert("wrong password")
         }
-        else alert("ban dang nhap sai id");
-
+        else if (id == "null") {
+            alert("canceled")
+        }
+        else alert("i don't know you");
     }
 </script>
 
