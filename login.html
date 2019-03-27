@@ -4,35 +4,27 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+
 <body>
 
-<form>
-    ID: <input type="text" id="id"/> <br/>
-    Password:  <input type="password" id="password"/> <br/>
-</form>
-
 <script>
-    function login(){
-        let id = document.getElementById("id").value;
-        let pass = document.getElementById("password").value;
-        if (id == "Admin"){
-            if (pass == "TheMaster"){
-                alert("Welcome")
-            }
-                else if (pass == "null"){
-                alert("canceled")
-            }
-                    else alert("wrong password")
+    let id = prompt("nhap id", " ");
+    if (id=='Admin'){
+        let pass = prompt("nhap pass", " ");
+        if (pass=='TheMaster'){
+            alert('welcome');
+        } else if (pass==null){
+            alert('canceled');
+        }else {
+            alert('wrong password');
         }
-        else if (id == "null") {
-            alert("canceled")
-        }
-        else alert("i don't know you");
+    }else if (id=='null'){
+        alert("canceled")
+    }else {
+        alert("i dont know you");
     }
 </script>
 
-<button onclick="login();">Login
-</button>
-
 </body>
+
 </html>
